@@ -1,11 +1,8 @@
 <p align="center">
-
-# 🏨 S&M Hotel Booking System
-
-</p>
-
+<h1 align="center">🏨 S&M Hotel Booking System</h1>
+<img src="screenshots/home.png" width="900">
 <p align="center">
-A complete hotel booking management system built with <b>PHP</b> and <b>SQLite</b>.
+A full-stack hotel booking web application built with <b>PHP</b> and <b>SQLite</b>.
 </p>
 
 <p align="center">
@@ -21,74 +18,109 @@ A complete hotel booking management system built with <b>PHP</b> and <b>SQLite</
 
 ---
 
-# 📖 Overview
+# 📖 Project Overview
 
-The **S&M Hotel Booking System** is a web-based application that allows guests to search and book hotel rooms while providing administrators with a dashboard to manage hotels, rooms, guests, and bookings.
+The **S&M Hotel Booking System** is a web-based booking platform that allows guests to search and reserve hotel rooms while giving administrators the ability to manage bookings, rooms, hotels, and guest information.
 
----
-
-# ✨ Features
-
-## Public Side
-
-- Responsive homepage displaying hotels and rooms
-- Room search by date and room type
-- Booking form for guests
-- Instant booking feedback
-
-## Admin Side
-
-- Secure login
-- Dashboard with charts using Chart.js
-- Manage bookings, guests, rooms, and hotels
-- Pagination for listings
-- Simple navigation
+This project demonstrates **full-stack web development** using **PHP, SQLite, HTML, CSS, and JavaScript**, including CRUD operations and data visualization using **Chart.js**.
 
 ---
 
-# 🧰 Technologies Used
+# 🚀 Key Features
 
-### Backend
-- PHP (procedural)
-- SQLite3
+## 👤 Guest Features
 
-### Frontend
-- HTML5
-- CSS3
-- JavaScript
+- Browse hotels and available rooms
+- Search rooms by date and type
+- Submit room booking requests
+- Instant booking confirmation
 
-### Libraries
-- Chart.js
-- Font Awesome
+## 🛠️ Admin Features
+
+- Secure admin authentication
+- Interactive dashboard with **Chart.js**
+- Manage bookings
+- Manage guest records
+- Manage room availability
+- Manage hotels
+- Pagination for large datasets
 
 ---
 
-# 🚀 Installation
+# 🧰 Tech Stack
+
+| Technology | Purpose |
+|-----------|---------|
+| HTML5 | Page structure |
+| CSS3 | Styling |
+| JavaScript | Client-side interaction |
+| PHP | Backend logic |
+| SQLite | Database |
+| Chart.js | Dashboard analytics |
+| Font Awesome | UI icons |
+
+---
+
+# 🖥️ Screenshots
+
+## Homepage
+
+![Homepage](screenshots/home.png)
+
+---
+
+## Rooms Page
+
+![Rooms](screenshots/rooms.png)
+
+---
+
+## Booking Page
+
+![Booking](screenshots/booking.png)
+
+---
+
+## Admin Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+## Manage Bookings
+
+![Bookings](screenshots/view.png)
+
+---
+
+# ⚙️ Installation
 
 ## Prerequisites
 
-- PHP 7.4+
+- PHP **7.4+**
 - SQLite extension enabled
 - Web server (Apache / Nginx / XAMPP)
 
 ---
 
-# 📥 Steps
-
-## 1 Clone Repository
+## 1. Clone Repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/sm-hotel-booking.git
 cd sm-hotel-booking
 ```
 
-## 2 Start PHP Server
+---
+
+## 2. Start PHP Server
 
 ```bash
 php -S localhost:8000
 ```
 
-## 3 Open in Browser
+---
+
+## 3. Open in Browser
 
 Public site
 
@@ -110,10 +142,10 @@ http://localhost:8000/admin/adminLogin.php
 |--------|--------|
 | james.manager | admin2024! |
 
-⚠️ Security Note:  
-Passwords are stored in plain text for demonstration purposes.
+⚠️ Security Notice:  
+Passwords are stored in **plain text** for demonstration purposes.
 
-In production always use:
+Production systems should use:
 
 ```
 password_hash()
@@ -122,7 +154,7 @@ password_verify()
 
 ---
 
-# 📁 Project Structure
+# 📂 Project Structure
 
 ```
 sm-hotel-booking/
@@ -173,53 +205,27 @@ SM_Hotel.db
 
 ---
 
-# 📸 Screenshots
-
-### Homepage
-
-![Homepage](screenshots/home.png)
-
-### Rooms
-
-![Rooms](screenshots/rooms.png)
-
-### Booking Page
-
-![Booking](screenshots/booking.png)
-
-### Admin Dashboard
-
-![Dashboard](screenshots/dashboard.png)
-
-### Add Booking
-
-![Add Booking](screenshots/add.png)
-
-### View Booking
-
-![View Booking](screenshots/view.png)
-
----
-
 # 🔮 Future Improvements
 
 - Implement password hashing
-- Add email confirmation after booking
-- Integrate payment gateway (Stripe / PayPal)
-- Improve UI using Bootstrap or Tailwind
-- Add multilingual support
-- Generate printable invoices
+- Email confirmation after booking
+- Payment gateway integration (Stripe / PayPal)
+- UI improvements using Bootstrap or Tailwind
+- Multi-language support
+- Printable booking invoices
 
 ---
 
 # 📄 License
 
-MIT License
+This project is licensed under the **MIT License**.
 
 ---
 
-# 👨‍💻 Authors
+# 👨‍💻 Author
 
-Developed by **Aqlan Naqib**
+**Aqlan Naqib**
 
 University Web Development Project
+
+Feel free to fork this project, suggest improvements, or submit pull requests.
