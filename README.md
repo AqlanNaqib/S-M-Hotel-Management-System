@@ -1,142 +1,225 @@
-S&M Hotel Booking System
-A complete hotel booking management system built with PHP and SQLite.
-The system includes a public booking interface for guests and a comprehensive admin panel for staff to manage bookings, guests, rooms, and hotels.
+<p align="center">
 
-📖 Description
-S&M Hotel is a modern hotel chain with multiple locations across the UK. This web application allows guests to search for available rooms, make bookings, and provides hotel administrators with a dashboard to oversee all operations. The admin panel features dynamic charts, pagination, and full CRUD (Create, Read, Update, Delete) functionality for all entities.
+# 🏨 S&M Hotel Booking System
 
-✨ Features
-Public Side
-Responsive homepage with hotel and room information
+</p>
 
-Room availability search by hotel, room type, and dates
+<p align="center">
+A complete hotel booking management system built with <b>PHP</b> and <b>SQLite</b>.
+</p>
 
-Online booking form with guest details and payment method selection
+<p align="center">
 
-Success/failure messages after booking
+![PHP](https://img.shields.io/badge/PHP-7.4+-777BB4?logo=php&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-Admin Side
-Secure login for administrators
+</p>
 
-Dashboard with four interactive charts (Chart.js):
+---
 
-Booking status distribution
+# 📖 Overview
 
-Revenue by payment status
+The **S&M Hotel Booking System** is a web-based application that allows guests to search and book hotel rooms while providing administrators with a dashboard to manage hotels, rooms, guests, and bookings.
 
-Room status overview
+---
 
-Most popular room types
+# ✨ Features
 
-Full CRUD operations for:
+## Public Side
 
-Bookings (view, add, update, delete)
+- Responsive homepage displaying hotels and rooms
+- Room search by date and room type
+- Booking form for guests
+- Instant booking feedback
 
-Guests (view, add, update, delete)
+## Admin Side
 
-Rooms (view, add, update, delete)
+- Secure login
+- Dashboard with charts using Chart.js
+- Manage bookings, guests, rooms, and hotels
+- Pagination for listings
+- Simple navigation
 
-Hotels (view, add, update, delete)
+---
 
-Pagination on all listing pages
+# 🧰 Technologies Used
 
-Navigation bar with dropdown menus for easy access
+### Backend
+- PHP (procedural)
+- SQLite3
 
-🛠️ Technologies Used
-Backend: PHP (procedural, SQLite3 extension)
+### Frontend
+- HTML5
+- CSS3
+- JavaScript
 
-Database: SQLite
+### Libraries
+- Chart.js
+- Font Awesome
 
-Frontend: HTML5, CSS3, JavaScript
+---
 
-Charts: Chart.js (via CDN)
+# 🚀 Installation
 
-Icons: Font Awesome
+## Prerequisites
 
-Other: Dynamic navbar loading with fetch()
+- PHP 7.4+
+- SQLite extension enabled
+- Web server (Apache / Nginx / XAMPP)
 
-🚀 Installation
-Prerequisites
-PHP 7.4 or higher (with SQLite extension enabled)
+---
 
-A web server (e.g., Apache, Nginx) or PHP built-in server
+# 📥 Steps
 
-Git (optional)
+## 1 Clone Repository
 
-Steps
-Clone the repository
-
-bash
-git clone https://github.com/yourusername/sm-hotel-booking.git
+```bash
+git clone https://github.com/YOUR_USERNAME/sm-hotel-booking.git
 cd sm-hotel-booking
-Start the PHP built-in server
+```
 
-bash
+## 2 Start PHP Server
+
+```bash
 php -S localhost:8000
-Open the application
+```
 
-Public site: http://localhost:8000/index.php
+## 3 Open in Browser
 
-Admin login: http://localhost:8000/admin/adminLogin.php
+Public site
 
-The SQLite database SM_Hotel.db is included in the project. If you need to recreate the database, you can find the schema in the project files (not provided here, but you can export the structure from the existing DB or refer to the code for table definitions).
+```
+http://localhost:8000/index.php
+```
 
-🔑 Default Admin Credentials
-For demonstration purposes, the database contains one admin user:
+Admin panel
 
-Username: aqlan
+```
+http://localhost:8000/admin/adminLogin.php
+```
 
-Password: aqlan123
+---
 
-⚠️ Security note: Passwords are stored in plain text. In a production environment, always use password hashing (e.g., password_hash() and password_verify()).
+# 🔑 Default Admin Credentials
 
-📁 Project Structure
-text
+| Username | Password |
+|--------|--------|
+| james.manager | admin2024! |
+
+⚠️ Security Note:  
+Passwords are stored in plain text for demonstration purposes.
+
+In production always use:
+
+```
+password_hash()
+password_verify()
+```
+
+---
+
+# 📁 Project Structure
+
+```
 sm-hotel-booking/
-│
-├── index.php                 # Public homepage
-├── booking.php               # Booking page (search & book)
-├── booking_functions.php     # Functions for public booking
-├── functions.php             # Misc helper functions (DB creation, etc.)
-├── db_connect.php            # Database connection helper
-├── navbar.html               # Navigation bar (loaded via JavaScript)
-├── script.js                 # Fetches navbar
-├── viewRoom.html             # Room details page
-│
-├── style/
-│   ├── style.css             # Main frontend styling
-│   └── booking.css           # Booking page specific styling
-│
-├── admin/                     # Admin area
-│   ├── adminLogin.php        # Login page
-│   ├── admin_dashboard.php   # Dashboard with charts
-│   ├── admin_navbar.php      # Admin navigation (included in all admin pages)
-│   ├── admin_functions.php   # Admin authentication
-│   ├── admin.css             # Admin panel styling
-│   ├── get_chart_data.php    # JSON data for charts
-│   │
-│   ├── booking_functions.php # Booking CRUD for admin
-│   ├── create_booking.php
-│   ├── update_booking.php
-│   ├── delete_booking.php
-│   ├── viewBookings.php
-│   │
-│   ├── guest_functions.php   # Guest CRUD
-│   ├── create_guest.php
-│   ├── update_guest.php
-│   ├── delete_guest.php
-│   ├── viewGuest.php
-│   │
-│   ├── room_functions.php    # Room CRUD
-│   ├── create_room.php
-│   ├── update_room.php
-│   ├── delete_room.php
-│   ├── viewRooms.php
-│   │
-│   ├── hotel_functions.php   # Hotel CRUD
-│   ├── create_hotel.php
-│   ├── update_hotel.php
-│   ├── delete_hotel.php
-│   ├── viewHotel.php
-│
-└── SM_Hotel.db               # SQLite database file
+
+index.php
+booking.php
+booking_functions.php
+functions.php
+db_connect.php
+navbar.html
+script.js
+viewRoom.html
+
+style/
+   style.css
+   booking.css
+
+admin/
+   adminLogin.php
+   admin_dashboard.php
+   admin_navbar.php
+   admin_functions.php
+   admin.css
+   get_chart_data.php
+
+   create_booking.php
+   update_booking.php
+   delete_booking.php
+   viewBookings.php
+
+   create_guest.php
+   update_guest.php
+   delete_guest.php
+   viewGuest.php
+
+   create_room.php
+   update_room.php
+   delete_room.php
+   viewRooms.php
+
+   create_hotel.php
+   update_hotel.php
+   delete_hotel.php
+   viewHotel.php
+
+SM_Hotel.db
+```
+
+---
+
+# 📸 Screenshots
+
+### Homepage
+
+![Homepage](screenshots/home.png)
+
+### Rooms
+
+![Rooms](screenshots/rooms.png)
+
+### Booking Page
+
+![Booking](screenshots/booking.png)
+
+### Admin Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### Add Booking
+
+![Add Booking](screenshots/add.png)
+
+### View Booking
+
+![View Booking](screenshots/view.png)
+
+---
+
+# 🔮 Future Improvements
+
+- Implement password hashing
+- Add email confirmation after booking
+- Integrate payment gateway (Stripe / PayPal)
+- Improve UI using Bootstrap or Tailwind
+- Add multilingual support
+- Generate printable invoices
+
+---
+
+# 📄 License
+
+MIT License
+
+---
+
+# 👨‍💻 Authors
+
+Developed by **Aqlan and Team**
+
+University Web Development Project
