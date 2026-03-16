@@ -1,0 +1,530 @@
+/* MAIN */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+
+/* ADMIN LOGIN  */
+
+body.admin-body {
+  background: linear-gradient(135deg, #8f0000, #b30000);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Back button */
+.admin-back-wrapper {
+  margin: 25px;
+
+}
+
+.admin-back-btn {
+  text-decoration: none;
+  padding: 10px 24px;
+  background: #ffffff;
+  border-radius: 40px;
+  font-size: 0.9rem;
+  font-family: "Playfair Display", serif;
+  color: #8f0000;
+  border: 1.5px solid #8f0000;
+  display: inline-block;
+  transition: 0.25s ease;
+}
+
+.admin-back-btn:hover {
+  background: #fbeaea;
+}
+
+
+/* Center card */
+.admin-login-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Login Card */
+.admin-login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 16px;
+  border-top: 5px solid #ffffff;
+  box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.4s ease;
+}
+
+/* Title */
+.admin-login-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #8f0000;
+  margin-bottom: 20px;
+}
+
+/* labell */
+.admin-login-form label {
+  font-family: "Playfair Display", serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+  color: #444;
+  font-weight: 600;
+}
+
+/* input boxe */
+.admin-login-form input[type="text"],
+.admin-login-form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fafafa;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.admin-login-form input[type="text"]:focus,
+.admin-login-form input[type="password"]:focus {
+  border-color: #b30000;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(179, 0, 0, 0.2);
+}
+
+/* Submit button */
+.admin-login-form input[type="submit"] {
+  width: 100%;
+  background: #b30000;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.admin-login-form input[type="submit"]:hover {
+  background: #8f0000;
+  transform: translateY(-2px);
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* NAVBAR */
+.header {
+  background: #8f0000;
+  padding: 35px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px; 
+  flex-wrap: nowrap; 
+}
+
+.navbar-brand {
+  font-family: "Playfair Display", serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.8rem;
+  letter-spacing: 0.1em;
+  position: relative;
+  display: inline-block;
+}
+
+.navbar-brand::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.navbar-brand:hover::after {
+  width: 100%;
+}
+
+
+.dropdown,
+.logout-form {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+/* dropdown style */
+.dropbtn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 6px 2px;
+  position: relative;
+}
+
+/* hover underline & color */
+.dropbtn:hover {
+  color: #ffdbdb;
+}
+
+.dropbtn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.dropbtn:hover::after {
+  width: 100%;
+}
+
+/* dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+  z-index: 99;
+}
+
+.dropdown-content a {
+  color: #8f0000;
+  padding: 10px 12px;
+  text-decoration: none;
+  display: block;
+  font-family: "Playfair Display", serif;
+}
+
+.dropdown-content a:hover {
+  background: #ffdbdb;
+}
+
+/* Show menu hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* logout button */
+.logout-form button {
+  padding: 8px 16px;
+  background: #fff;
+  color: #8f0000;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logout-form button:hover {
+  background: #ffdbdb;
+}
+
+
+/* MAIN CONTENT */
+
+.centered-header {
+  text-align: center;
+  margin: 30px 0;
+  font-family: "Playfair Display", serif;
+  color: #b30000;
+}
+
+.main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TABLE */
+
+.main table {
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.main table th {
+  background: #b30000;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.main table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.main table tr:nth-child(even) {
+  background: #f5f5f5;
+}
+
+.main table tr:hover {
+  background: #ffecec;
+}
+
+.main table a {
+  display: inline-block;
+  padding: 5px 8px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.75rem;
+}
+
+.main table a[href*='update'] {
+  background: #ff6a00;
+}
+
+.main table a[href*='delete'] {
+  background: #b30000;
+}
+
+/* UPDATE FORMS */
+
+.update-form-table {
+  width: 360px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.update-form-table label {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.update-form-table input[type="text"],
+.update-form-table input[type="date"],
+.update-form-table input[type="email"],
+.update-form-table input[type="number"],
+.update-form-table input[type="tel"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.update-form-table input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: #b30000;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* pagination */
+
+.pagination {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.pagination a,
+.pagination strong {
+  min-width: 40px;
+  height: 40px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.pagination a {
+  background: #eee;
+  color: #333;
+}
+
+.pagination strong {
+  background: #b30000;
+  color: white;
+}
+
+.pagination a:hover {
+  background: #d4d4d4;
+}
+
+/* buttons update & delete */
+.main table th.actions {
+  text-align: center;
+  width: 150px;
+}
+
+.main table td.actions {
+  text-align: center;
+}
+
+/* responsive */
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main table {
+    font-size: 0.75rem;
+  }
+
+  .update-form-table {
+    width: 90%;
+  }
+}
+
+.dashboard-container {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.chart-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart-card h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.chart-container {
+  position: relative;
+  height: 300px;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* create form containner */
+.create-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.92); /* soft white */
+    border-radius: 12px;
+    border: 1px solid #e3dada;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* title center */
+.centered-header {
+    text-align: center;
+    color: #8f0000;
+    font-family: "Playfair Display", serif;
+    margin-bottom: 10px;
+}
+
+/*  form to vertical */
+.create-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* input styles (check the box again)*/
+.create-form input[type="text"],
+.create-form input[type="number"],
+.create-form input[type="date"],
+.create-form input[type="email"],
+.create-form select {
+    width: 100%;              
+    height: 20px;             
+    padding: 10px 10px;       
+    font-size: 18px;          
+    border: 2px solid #ccc;   
+    border-radius: 10px;       
+    background-color: #ffffff;
+    box-sizing: border-box;   
+    margin-bottom: 18px;      
+}
+
+/* Input focus  */
+.create-form input:focus,
+.create-form select:focus {
+    border-color: #8f0000;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(143, 0, 0, 0.1);
+}
+
+/* Submit button */
+.create-form input[type="submit"] {
+    background: #8f0000;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.create-form input[type="submit"]:hover {
+    background: #a40000;
+}

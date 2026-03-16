@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms & Suites | S&amp;M Hotel</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body onload="loadNavbar()">
+    <div class="container">
+        <!-- NAVBAR -->
+        <div id="navbar-container"></div>
+
+        <!-- PAGE HERO / BANNER -->
+        <section class="room-hero">
+            <div class="room-hero-inner">
+                <p class="room-hero-kicker">Rooms &amp; Suites</p>
+                <h1>Stay in Comfort &amp; Style</h1>
+                <p class="room-hero-text">
+                    From cozy singles to elegant suites, every S&M room is designed with 
+                    warm tones, premium bedding, and thoughtful details inspired by leading 
+                    luxury brands.
+                </p>
+                <a href="booking.php" class="hero-btn room-hero-btn">Book Your Stay</a>
+            </div>
+        </section>
+
+        <!-- ROOMS LIST SECTION -->
+        <main class="room-details-page">
+            <!-- Single Room -->
+            <section class="room-detail-card">
+                <div class="room-detail-image"
+                     style="background-image: url('https://victoriahotel.co.uk/sites/default/files/2022-09/bc-victoria-accom_standard-single-room-301-at-victoria-hotel.jpg');">
+                </div>
+                <div class="room-detail-content">
+                    <h2>Single Room</h2>
+                    <p class="room-detail-subtitle">Perfect for solo stays</p>
+                    <p class="room-detail-description">
+                        A calm, modern room designed for business and solo travelers. Enjoy a 
+                        plush single bed, soft lighting, and a work desk, all in a thoughtfully 
+                        designed space.
+                    </p>
+
+                    <ul class="room-detail-list">
+                        <li><i class="fa-solid fa-bed"></i> 1 plush single bed</li>
+                        <li><i class="fa-solid fa-wifi"></i> High-speed Wi-Fi</li>
+                        <li><i class="fa-solid fa-mug-hot"></i> Tea &amp; coffee set</li>
+                        <li><i class="fa-solid fa-tv"></i> 40" Smart TV</li>
+                    </ul>
+
+                    <div class="room-detail-bottom">
+                        <div class="room-detail-rate">
+                            From <span class="rate-amount">£89</span> / night
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Double Room -->
+            <section class="room-detail-card">
+                <div class="room-detail-image"
+                     style="background-image: url('https://djmzubtjl6upi.cloudfront.net/wp-content/uploads/sites/3/2017/12/Deluxe-Double-Guestroom2.jpg');">
+                </div>
+                <div class="room-detail-content">
+                    <h2>Double Room</h2>
+                    <p class="room-detail-subtitle">Ideal for couples</p>
+                    <p class="room-detail-description">
+                        A bright, welcoming room with a comfortable double bed and warm neutral 
+                        décor. Perfect for city breaks, weekend getaways, or a relaxing overnight stay.
+                    </p>
+
+                    <ul class="room-detail-list">
+                        <li><i class="fa-solid fa-bed"></i> 1 double bed</li>
+                        <li><i class="fa-solid fa-bath"></i> Modern en-suite bathroom</li>
+                        <li><i class="fa-solid fa-wifi"></i> High-speed Wi-Fi</li>
+                        <li><i class="fa-solid fa-wine-glass"></i> In-room mini fridge</li>
+                    </ul>
+
+                    <div class="room-detail-bottom">
+                        <div class="room-detail-rate">
+                            From <span class="rate-amount">£109</span> / night
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Twin Room -->
+            <section class="room-detail-card">
+                <div class="room-detail-image"
+                     style="background-image: url('https://www.royalgardenhotel.co.uk/_img/videos/deluxe-twin.png');">
+                </div>
+                <div class="room-detail-content">
+                    <h2>Twin Room</h2>
+                    <p class="room-detail-subtitle">Great for friends or colleagues</p>
+                    <p class="room-detail-description">
+                        Two separate beds in a spacious layout, ideal for friends, colleagues, 
+                        or family members who prefer their own space while sharing a room.
+                    </p>
+
+                    <ul class="room-detail-list">
+                        <li><i class="fa-solid fa-bed"></i> 2 single beds</li>
+                        <li><i class="fa-solid fa-briefcase"></i> Work desk &amp; chair</li>
+                        <li><i class="fa-solid fa-tv"></i> 43" Smart TV</li>
+                        <li><i class="fa-solid fa-snowflake"></i> In-room climate control</li>
+                    </ul>
+
+                    <div class="room-detail-bottom">
+                        <div class="room-detail-rate">
+                            From <span class="rate-amount">£119</span> / night
+                    </div>
+                </div>
+            </section>
+
+            <!-- Deluxe Room -->
+            <section class="room-detail-card">
+                <div class="room-detail-image"
+                     style="background-image: url('https://www.peninsula.com/en/-/media/12---london-property/rooms/20230918-new-images/london_deluxe-room-king_resized.jpg?mw=905&hash=5EBA7EAB9A5C9EC1B43B72F28067F469');">
+                </div>
+                <div class="room-detail-content">
+                    <h2>Deluxe Room</h2>
+                    <p class="room-detail-subtitle">Extra space, refined comfort</p>
+                    <p class="room-detail-description">
+                        Step up to a larger room with enhanced décor, a plush king bed, and a 
+                        comfortable seating area. Designed for guests who enjoy a little more space.
+                    </p>
+
+                    <ul class="room-detail-list">
+                        <li><i class="fa-solid fa-bed"></i> 1 king-size bed</li>
+                        <li><i class="fa-solid fa-couch"></i> Lounge seating area</li>
+                        <li><i class="fa-solid fa-bell-concierge"></i> Priority check-in</li>
+                        <li><i class="fa-solid fa-martini-glass-citrus"></i> Complimentary welcome drink</li>
+                    </ul>
+
+                    <div class="room-detail-bottom">
+                        <div class="room-detail-rate">
+                            From <span class="rate-amount">£149</span> / night
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Suite -->
+            <section class="room-detail-card">
+                <div class="room-detail-image"
+                     style="background-image: url('https://www.telegraph.co.uk/content/dam/luxury/2018/02/14/Shangri-La-Shard.jpg');">
+                </div>
+                <div class="room-detail-content">
+                    <h2>Suite</h2>
+                    <p class="room-detail-subtitle">Our signature experience</p>
+                    <p class="room-detail-description">
+                        Separate living and sleeping areas, panoramic views, and elevated 
+                        amenities. The Suite is designed for special occasions, extended stays, 
+                        and guests who want the very best.
+                    </p>
+
+                    <ul class="room-detail-list">
+                        <li><i class="fa-solid fa-bed"></i> 1 king-size bed</li>
+                        <li><i class="fa-solid fa-city"></i> City or skyline views</li>
+                        <li><i class="fa-solid fa-champagne-glasses"></i> Complimentary welcome amenities</li>
+                        <li><i class="fa-solid fa-user-tie"></i> Priority late checkout (subject to availability)</li>
+                    </ul>
+
+                    <div class="room-detail-bottom">
+                        <div class="room-detail-rate">
+                            From <span class="rate-amount">£219</span> / night
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </div>
+</body>
+</html>

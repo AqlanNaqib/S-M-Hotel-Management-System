@@ -1,0 +1,183 @@
+/* reset */
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+
+/* background with hotel image */
+body{
+ font-family:"Playfair Display", serif; 
+ background:url("https://wallpapers.com/images/hd/hotel-background-2qosz2h6xb1xpnka.jpg");
+ background-size:cover;
+ background-position:center;
+ background-attachment:fixed;
+ color:#8f0000; 
+ padding:20px;
+}
+
+/* content box */
+.container{
+ max-width:800px;
+ margin:auto;
+ background:#fff;    
+ padding:30px;
+ border-radius:10px;
+ border:1px solid #8f0000; 
+ box-shadow:0 4px 10px rgba(0,0,0,0.15); 
+}
+
+
+
+/* header */
+.header{
+ text-align:center;
+ padding-bottom:15px;
+ border-bottom:1px solid #8f0000;
+ margin-bottom:30px;
+}
+
+.header h1{
+ color:#8f0000;
+ font-weight:600;
+}
+
+.header p{
+ color:#8f0000;
+}
+
+/* section titles */
+.form-section h2{
+ color:#8f0000;
+ border-left:4px solid #8f0000;
+ padding-left:10px;
+ margin-bottom:15px;
+ font-size:20px;
+}
+
+/* labels */
+.form-group label{
+ color:#8f0000;
+ font-weight:600;
+}
+
+/* inputs */
+.form-group input,
+.form-group select,
+.form-group textarea{
+ width:100%;
+ padding:10px;
+ border-radius:6px;
+ border:1px solid #8f0000;
+ font-family:"Playfair Display", serif;
+ background:#fff;
+ color:#8f0000;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+ border-color:#8f0000;
+ outline:none;
+ box-shadow:0 0 0 2px rgba(143,0,0,0.15);
+}
+
+/* submit button */
+.btn-submit{
+ background:#8f0000;
+ color:#fff;
+ border:none;
+ padding:12px;
+ border-radius:40px;
+ width:100%;
+ font-size:16px;
+ cursor:pointer;
+}
+
+.btn-submit:hover{
+ background:#a40000;
+}
+
+/* message boxes */
+.success-box{
+ background:#fff;
+ border:1px solid #8f0000;
+ color:#8f0000;
+ padding:20px;
+ border-radius:8px;
+}
+
+.error-box{
+ background:#fff;
+ border:1px solid #8f0000;
+ color:#8f0000;
+ padding:20px;
+ border-radius:8px;
+}
+
+.info-box{
+ background:#fff;
+ border:1px solid #8f0000;
+ color:#8f0000;
+ padding:20px;
+ border-radius:8px;
+}
+
+/* rooms */
+.room-list{
+ border:1px solid #8f0000;
+ padding:15px;
+ border-radius:8px;
+ background:#fff;
+ color:#8f0000;
+}
+
+.room-item{
+ border:1px solid #8f0000;
+ padding:15px;
+ border-radius:6px;
+ margin-bottom:10px;
+ background:#fff;
+}
+
+.room-item:hover{
+ background:#fff3f3;
+}
+
+.room-item.selected{
+ background:#ffe5e5;
+ border-color:#8f0000;
+}
+
+/* back button */
+.back-btn{
+    display:inline-block;
+    font-family: serif;
+    margin-bottom:20px;
+    background:#8f0000;
+    padding:10px 25px;
+    color:white;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    letter-spacing:.5px;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#b30000;
+    transform:translateY(-2px);
+}
+
+/* normal button */
+.btn{
+ background:#8f0000;
+ color:#fff;
+ padding:10px 20px;
+ border-radius:40px;
+ display:inline-block;
+ text-decoration:none;
+}
+
+.btn:hover{
+ background:#a00000;
+}

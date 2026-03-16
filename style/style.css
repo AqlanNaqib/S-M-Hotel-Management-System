@@ -1,0 +1,870 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  padding-top: 80px; 
+}
+
+/* Navbar container */
+.navbar {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Inner wrapper */
+.navdiv {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo a {
+  text-decoration: none;
+  font-family: "Playfair Display", serif;  
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* small amper */
+.logo .amp {
+  font-size: 0.8em;
+}
+
+/* nav list */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* nav links */
+.navbar ul li a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: #444444;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-bottom: 0.2rem;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar ul li a:hover {
+  color: #b30000;              
+  border-color: #b30000;
+}
+
+/* buttons in navbar */
+.navbar ul button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.9rem 2rem;
+  border-radius: 999px;
+  font-size: 1.0rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-left: 0.25rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Book Now button */
+.navbar ul button:first-of-type {
+  background-color: #b30000;
+}
+
+.navbar ul button:first-of-type a {
+  color: #ffffff;
+}
+
+/* Admin button */
+.navbar ul button:last-of-type {
+  background-color: #f3f3f3;
+}
+
+.navbar ul button:last-of-type a {
+  color: #333333;
+}
+
+/* Button links */
+.navbar ul button a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Hover effects on buttons */
+.navbar ul button:hover {
+  transform: translateY(-1px);
+  background-color: #8f0000;   
+}
+
+.navbar ul button:last-of-type:hover {
+  background-color: #e0e0e0;
+}
+
+/* responsive for small screens */
+@media (max-width: 768px) {
+  .navdiv {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    margin-top: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}
+/* LAYOUT WRAP */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HERO/HOME SECTION */
+
+.hero {
+  position: relative;
+  padding: 6rem 1.5rem;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 12px;
+  color: #ffffff;
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ),
+    url('https://wallpapers.com/images/hd/hotel-background-2qosz2h6xb1xpnka.jpg') no-repeat center center/cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .section-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.hero h1 .highlight {
+  color: #ffd700; 
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  font-family: "Playfair Display", serif;
+  line-height: 1.8;
+  color: #fefefe;
+  margin-bottom: 2rem;
+  max-width: 650px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); 
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
+  border: none;
+  background-color: #b30000;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-btn:hover {
+  background-color: #8f0000;
+  transform: translateY(-1px);
+}
+
+/* Fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HOTEL SECTION */
+
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.hotel-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(4px);
+  box-shadow: 0 12px 28px rgba(179, 0, 0, 0.2); 
+}
+
+.hotel-image {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.hotel-london {
+  background-image: url("https://res.cloudinary.com/aenetworks/image/upload/c_fill,ar_2,w_3840,h_1920,g_auto/dpr_auto/f_auto/q_auto:eco/v1/topic-london-gettyimages-760251843-feature?_a=BAVAZGID0");
+}
+
+.hotel-sheffield {
+  background-image: url("https://www.thetimes.com/imageserver/image/%2F76d0a889-ee6a-47f5-9cd2-21f2353023eb.jpg?crop=1600%2C900%2C0%2C0");
+}
+
+.hotel-manchester {
+  background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/a1/ee/e8/the-famous-manchester.jpg?w=500&h=500&s=1");
+}
+
+.hotel-birmingham {
+  background-image: url("https://media.timeout.com/images/102921581/image.jpg");
+}
+
+.hotel-liverpool {
+  background-image: url("https://diycruiseports.com/wp-content/uploads/2024/05/Liverpool-Aerial-View-from-Royal-Liver-Building.webp");
+}
+
+.hotel-info {
+  padding: 1rem 1.2rem 1.3rem;
+}
+
+.hotel-info h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.hotel-info p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Rooms Section */
+.rooms-section {
+  padding: 4rem 1.5rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.rooms-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.rooms-section p {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Rooms grid */
+.rooms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+/* Each room */
+.room-item {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-item h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.room-item p {
+  font-size: 0. nine5rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.room-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(179,0,0,0.25);
+}
+
+/* image */
+.room-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+
+/* view Details Button */
+.room-view-btn {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.room-view-btn .hero-btn {
+  padding: 0.8rem 2rem;
+  background-color: #b30000;
+  color: #fff;
+  border-radius: 999px;
+  text-transform: uppercase;
+  font-weight: 700; 
+  letter-spacing: 0.18em; 
+  font-size: 0.9rem;
+  font-family: "Playfair Display", serif; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.room-view-btn .hero-btn:hover {
+  background-color: #8f0000;
+  transform: translateY(-2px);
+}
+
+/* amenities Section  */
+.amenities-section {
+    padding: 5rem 1.5rem;
+    background: #ffd6d6; 
+    color: #333;
+    text-align: center;
+}
+
+.amenities-section h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+    color: #1f1d1d;
+}
+
+.amenities-section p {
+    color: #555;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+}
+
+/* Grid layout */
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+/* individual card */
+.amenity-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.amenity-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(179,0,0,0.25);
+}
+
+/* icon */
+.amenity-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #b30000;
+}
+
+/* Card title */
+.amenity-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+/* card description */
+.amenity-card p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* responsive  */
+@media (max-width: 768px) {
+    .amenities-grid {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .amenities-grid {
+        gap: 1rem;
+    }
+}
+
+
+
+
+/*  GENERAL SECTION  */
+
+.section {
+  padding: 3rem 1.5rem;
+  scroll-margin-top: 90px;
+}
+
+.section-alt {
+  background-color: #fafafa;
+}
+
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.section p,
+.section ul {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.section ul {
+  padding-left: 1.2rem;
+}
+
+.section ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* CONTACT FORM  */
+
+.contact-form {
+  margin-top: 1.5rem;
+  max-width: 500px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  margin-top: 0.3rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  margin-top: 0.75rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background-color: #b30000;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #8f0000;
+  transform: translateY(-1px);
+}
+
+/* FOOTER  */
+
+/* Footer */
+.footer-section {
+    background: #1a1a1a; 
+    color: #fff;
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+.footer-section h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff; 
+}
+
+.footer-section p {
+    color: #ccc;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+/* Footer content wrapper */
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+/* Contact info */
+.contact-info p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+}
+
+/* Contact form */
+.contact-form {
+    max-width: 400px;
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+/* Form button */
+.footer-btn {
+    padding: 0.75rem 1.6rem;
+    background-color: #b30000;
+    color: #fff;
+    border-radius: 999px;
+    border: none;
+    text-transform: uppercase;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-btn:hover {
+    background-color: #8f0000;
+    transform: translateY(-2px);
+}
+
+/* Footer note */
+.footer-note {
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+}
+
+/*  ROOM DETAILS  */
+
+/* banner for the room details */
+.room-hero {
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  padding: 4.5rem 1.5rem;
+  border-radius: 12px;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("https://wallpapers.com/images/hd/hotel-background-2qosz2h6xb1xpnka.jpg") no-repeat center center / cover;
+  color: #fff;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.room-hero-inner {
+  max-width: 700px;
+}
+
+.room-hero-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+  opacity: 0.85;
+}
+
+.room-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.room-hero-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 540px;
+  margin-bottom: 1.5rem;
+}
+
+.room-hero-btn {
+  background-color: #b30000;
+}
+
+.room-hero-btn:hover {
+  background-color: #8f0000;
+}
+
+/* layout for all room detail cards */
+.room-details-page {
+  margin-bottom: 3rem;
+}
+
+/* room card */
+.room-detail-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.4fr);
+  gap: 2rem;
+  align-items: stretch;
+  padding: 1.8rem 1.5rem;
+  margin-bottom: 1.6rem;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+}
+
+/* Room image */
+.room-detail-image {
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  min-height: 220px;
+}
+
+/* Room text content */
+.room-detail-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  margin-bottom: 0.2rem;
+  color: #111;
+}
+
+.room-detail-subtitle {
+  font-size: 0.9rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #b30000;
+  margin-bottom: 0.8rem;
+}
+
+.room-detail-description {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* amenities list inside each room card */
+.room-detail-list {
+  list-style: none;
+  margin-bottom: 1.2rem;
+}
+
+.room-detail-list li {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.room-detail-list i {
+  color: #b30000;
+  width: 18px;
+  text-align: center;
+}
+
+/* Bottom  */
+.room-detail-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.room-detail-rate {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.rate-amount {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #b30000;
+}
+
+/*  button */
+.room-detail-btn {
+  padding: 0.65rem 1.6rem;
+  border-radius: 999px;
+  background-color: #b30000;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  font-family: "Playfair Display", serif;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.room-detail-btn:hover {
+  background-color: #8f0000;
+  transform: translateY(-1px);
+}
+
+/* note at the bottom */
+.room-footer-note {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* responsive for room details */
+@media (max-width: 900px) {
+  .room-detail-card {
+    grid-template-columns: 1fr;
+  }
+
+  .room-detail-image {
+    min-height: 200px;
+  }
+
+  .room-hero {
+    text-align: center;
+  }
+
+  .room-hero-inner {
+    text-align: center;
+  }
+
+  .room-hero-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .room-hero {
+    padding: 3.5rem 1.2rem;
+  }
+
+  .room-hero h1 {
+    font-size: 2rem;
+  }
+
+  .room-detail-card {
+    padding: 1.4rem 1.2rem;
+  }
+}
+
+/* responsive  */
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1.2rem 2.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 2.5rem 1.2rem;
+  }
+}
