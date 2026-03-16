@@ -220,6 +220,6 @@ MIT License
 
 # 👨‍💻 Authors
 
-Developed by **Aqlan and Team**
+Developed by **Aqlan Naqib**
 
 University Web Development Project
