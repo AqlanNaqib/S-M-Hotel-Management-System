@@ -26,6 +26,22 @@ This project demonstrates **full-stack web development** using **PHP, SQLite, HT
 
 ---
 
+## 🎯 Purpose
+This system simulates a real-world hotel booking platform, allowing efficient management of reservations, customers, and room availability.
+
+It is designed to demonstrate full-stack development skills and database-driven application design.
+
+---
+
+## 🧠 System Design
+
+- Follows a modular PHP structure
+- Uses SQLite for lightweight database management
+- Implements CRUD operations across all entities
+- Admin dashboard uses Chart.js for data visualization
+
+---
+
 # 🚀 Key Features
 
 ## 👤 Guest Features
@@ -151,6 +167,11 @@ Production systems should use:
 password_hash()
 password_verify()
 ```
+- Passwords currently stored in plain text (demo purpose)
+- Should be replaced with:
+  - password_hash()
+  - password_verify()
+- Input validation and sanitisation should be added to prevent SQL injection
 
 ---
 
@@ -216,6 +237,12 @@ SM_Hotel.db
 
 ---
 
+## 🎥 Demo
+(https://shu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0fdedda3-1d49-4db3-baef-)
+
+
+---
+
 # 📄 License
 
 This project is licensed under the **MIT License**.
@@ -226,6 +253,5 @@ This project is licensed under the **MIT License**.
 
 **Aqlan Naqib**
 
-University Web Development Project
 
 Feel free to fork this project, suggest improvements, or submit pull requests.
