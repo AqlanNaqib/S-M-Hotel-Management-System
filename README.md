@@ -238,7 +238,7 @@ SM_Hotel.db
 ---
 
 ## 🎥 Demo
-https://shu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0fdedda3-1d49-4db3-baef-b3b4016d4842
+https://youtu.be/Q2bImjhb4H0?feature=shared
 
 
 ---
