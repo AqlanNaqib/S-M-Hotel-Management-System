@@ -1,26 +1,39 @@
+<h1 align="center">🏨 Hotel Booking Management System</h1>
+
 <p align="center">
-<h1 align="center">🏨 S&M Hotel Booking System</h1>
-<img src="screenshots/home.png" width="900">
-<p align="center">
-A full-stack hotel booking web application built with <b>PHP</b> and <b>SQLite</b>.
+  <img src="screenshots/home.png" width="900">
 </p>
 
 <p align="center">
-
-![PHP](https://img.shields.io/badge/PHP-7.4+-777BB4?logo=php&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
-![License](https://img.shields.io/badge/license-MIT-green)
-
+A production-style full-stack hotel booking system featuring admin analytics, real-time booking management, and complete CRUD functionality, built with <b>PHP</b>, <b>SQLite</b>, and modern web technologies.
 </p>
+
+<p align="center">
+  <sub>Built as part of my BSc Computer Science portfolio</sub>
+</p>
+
+<p align="center">
+  <a href="https://youtu.be/Q2bImjhb4H0?feature=shared">
+    <img src="https://img.shields.io/badge/Watch-Demo-red?style=for-the-badge&logo=youtube" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/PHP-7.4+-777BB4?logo=php&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQLite-003B57?logo=sqlite" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/license-MIT-green" />
+</p>
+
+<br>
 
 ---
 
 # 📖 Project Overview
 
-The **S&M Hotel Booking System** is a web-based booking platform that allows guests to search and reserve hotel rooms while giving administrators the ability to manage bookings, rooms, hotels, and guest information.
+The **Hotel Booking Management System** is a web-based booking platform that allows guests to search and reserve hotel rooms while giving administrators the ability to manage bookings, rooms, hotels, and guest information.
 
 This project demonstrates **full-stack web development** using **PHP, SQLite, HTML, CSS, and JavaScript**, including CRUD operations and data visualization using **Chart.js**.
 
@@ -60,6 +73,15 @@ It is designed to demonstrate full-stack development skills and database-driven 
 - Manage room availability
 - Manage hotels
 - Pagination for large datasets
+
+---
+
+## ⚡ Highlights
+
+- Full-stack CRUD system across multiple entities
+- Admin analytics dashboard using Chart.js
+- Modular backend architecture in PHP
+- Lightweight database integration using SQLite
 
 ---
 
@@ -122,7 +144,7 @@ It is designed to demonstrate full-stack development skills and database-driven 
 ## 1. Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/sm-hotel-booking.git
+git clone https://github.com/AqlanNaqib/S-M-Hotel-Management-System.git
 cd sm-hotel-booking
 ```
 
@@ -158,17 +180,12 @@ http://localhost:8000/admin/adminLogin.php
 |--------|--------|
 | james.manager | admin2024! |
 
-⚠️ Security Notice:  
-Passwords are stored in **plain text** for demonstration purposes.
+---
 
-Production systems should use:
+# 🔐 Security Considerations
 
-```
-password_hash()
-password_verify()
-```
-- Passwords currently stored in plain text (demo purpose)
-- Should be replaced with:
+- Passwords are currently stored in plain text (for demonstration purposes only)
+- In production, implement:
   - password_hash()
   - password_verify()
 - Input validation and sanitisation should be added to prevent SQL injection
@@ -237,9 +254,12 @@ SM_Hotel.db
 
 ---
 
-## 🎥 Demo
-https://youtu.be/Q2bImjhb4H0?feature=shared
+# 📚 What I Learned
 
+- Designing relational database schemas
+- Handling CRUD operations across multiple entities
+- Structuring a modular PHP application
+- Building admin dashboards with data visualisation
 
 ---
 
@@ -251,7 +271,9 @@ This project is licensed under the **MIT License**.
 
 # 👨‍💻 Author
 
-**Aqlan Naqib**
+**Aqlan Naqib**  
+BSc Computer Science @ Sheffield Hallam University  
+Aspiring Software Developer  
 
 
-Feel free to fork this project, suggest improvements, or submit pull requests.
+⭐ If you found this project useful, feel free to star the repository!
